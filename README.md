@@ -19,5 +19,15 @@ Dara un error por las migraciones
 
 ## Creacion de la base de datos
 - Crear la base de datos en mysql
-
-
+- Creacion del modelo Proyecto
+````bash
+php artisan make:model Proyecto -m
+````
+- Creacion de la migracion
+````bash
+php artisan migrate
+````
+- Creacion del controlador
+````bash
+php artisan make:controller ProyectoController
+````
