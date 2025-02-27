@@ -10,7 +10,9 @@
         <div id="welcome_text" class="flex flex-col items-center gap-3">
             <h1 class="text-4xl font-bold text-center text-gray-800">Bienvenido a CrudNisc</h1>
             <p>Un crud para la administracion de proyectos y usuarios</p>
+            <a href="{{route('login')}}">
             <button class="bg-botones text-center p-4 text-white rounded-xl">Empezar</button>
+            </a>
         </div>
     </body>
 </html>
