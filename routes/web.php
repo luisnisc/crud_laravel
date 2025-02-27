@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
+use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,8 +10,13 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/app', function () {
-    return view('app');
-})->name('app');
+    $projects = Project::all();
+    return view('app', compact('projects'));
+})->middleware(['auth', 'verified'])->name('app');
+
+Route::resource('projects', ProjectController::class)->middleware('auth');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

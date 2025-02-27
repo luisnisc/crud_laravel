@@ -17,7 +17,8 @@ export default {
             backgroundColor: {
                 body: '#A9BFFF',
                 botones: "#4E68B3",
-                
+                dark_blue: "#212D4D",
+                table: "#5977CC",
             }
         },
     },
