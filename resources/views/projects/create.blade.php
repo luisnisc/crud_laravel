@@ -33,6 +33,19 @@
                     <span class="text-red-600 text-sm">{{ $message }}</span>
                 @enderror
             </div>
+
+            <!-- Usuario -->
+            <div class="mb-4">
+                <label for="usuario_id" class="block text
+                -gray-700">Usuario</label>
+                <select name="usuario_id" id="usuario_id" class="border border-gray-300 w-full p-2" required>
+                    <option value="">Seleccione un usuario</option>
+                    @foreach($usuarios as $usuario)
+                        <option value="{{ $usuario->id }}" {{ old('usuario_id') == $usuario->id ? 'selected' : '' }}>
+                            {{ $usuario->nombre }}
+                        </option>
+                    @endforeach
+                </select>
             
             <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">
                 Guardar Proyecto

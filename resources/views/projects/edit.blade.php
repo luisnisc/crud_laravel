@@ -5,7 +5,6 @@
             @csrf
             @method('PUT')
 
-            <!-- Título -->
             <div class="mb-4">
                 <label for="titulo" class="block text-gray-700">Título</label>
                 <input type="text" id="titulo" name="titulo"
@@ -16,7 +15,6 @@
                 @enderror
             </div>
 
-            <!-- Horas previstas -->
             <div class="mb-4">
                 <label for="horas_previstas" class="block text-gray-700">Horas previstas</label>
                 <input type="number" id="horas_previstas" name="horas_previstas"
@@ -27,7 +25,6 @@
                 @enderror
             </div>
 
-            <!-- Fecha de comienzo -->
             <div class="mb-4">
                 <label for="fecha_de_comienzo" class="block text-gray-700">Fecha de comienzo</label>
                 <input type="date" id="fecha_de_comienzo" name="fecha_de_comienzo"
@@ -40,6 +37,9 @@
 
             <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
                 Actualizar Proyecto
+            </button>
+            <button>
+                <a href="{{ route('app') }}" class="bg-red-600 text-white px-4 py-2.5 rounded">Cancelar</a>
             </button>
         </form>
     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -21,7 +22,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        $usuarios = Usuario::all();
+        return view('projects.create', compact('usuarios'));
     }
 
     /**
@@ -33,6 +35,8 @@ class ProjectController extends Controller
             'titulo'       => 'required|max:255',
             'horas_previstas'       => 'required|integer',
             'fecha_de_comienzo'  => 'required|date',
+            // Agrega si recibes usuario_id desde el formulario:
+            'usuario_id' => 'required|exists:usuarios,id',
         ]);
 
         Project::create($validated);

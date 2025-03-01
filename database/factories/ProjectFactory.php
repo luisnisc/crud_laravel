@@ -16,13 +16,17 @@ class ProjectFactory extends Factory
      * @return array<string, mixed>
      */
     protected $model = Project::class;
-    
-     public function definition(): array
+
+    public function definition(): array
     {
         return [
             'titulo' => $this->faker->sentence(3),
             'horas_previstas' => $this->faker->numberBetween(10, 100),
             'fecha_de_comienzo' => $this->faker->date(),
+            // Usar la factory del modelo Usuario personalizado
+            'usuario_id' => \App\Models\Usuario::count()
+                ? \App\Models\Usuario::all()->random()->id
+                : \App\Models\Usuario::factory()->create()->id,
         ];
     }
 }

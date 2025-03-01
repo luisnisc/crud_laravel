@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\LanguageController;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +18,9 @@ Route::get('/app', function () {
 
 Route::resource('projects', ProjectController::class)->middleware('auth');
 
+Route::resource('usuarios', UsuarioController::class)->middleware('auth');
 
+Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

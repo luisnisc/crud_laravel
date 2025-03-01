@@ -1,21 +1,21 @@
 <header class="bg-dark_blue text-white py-4 w-full">
     <div class="container mx-auto flex justify-between items-center px-4">
-        <a href="{{ url('/') }}" class="text-2xl font-bold">CrudNisc</a>
-        <h2>Registrado como: {{auth()->user()->name}}</h2>
-        <nav>
-            <ul class="flex space-x-4">
-                @auth
-                    <li>
-                        <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button type="submit" class="hover:underline">Cerrar sesión</button>
-                        </form>
-                    </li>
-                @else
-                    <li><a href="{{ route('login') }}" class="hover:underline">Iniciar Sesión</a></li>
-                    <li><a href="{{ route('register') }}" class="hover:underline">Registrarse</a></li>
-                @endauth
+        <a href="{{ route('home') }}" class="text-2xl font-bold">CrudNisc</a>
+        <h2 class="font-bold">{{__('Conectado como:')}} {{auth()->user()->name}}</h2>
+        <nav class="flex items-center">
+            <ul class="flex space-x-4 mr-10">
+                <li>
+                    <a href="{{ route('app') }}" class="hover:underline">{{__('Proyectos')}}</a>
+                </li>
+                <li>
+                    <a href="{{ route('usuarios.index') }}" class="hover:underline">{{__('Usuarios')}}</a>
+                </li>
             </ul>
+            <x-layouts.lang/>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="p-3 bg-blue-900 rounded-xl">{{__('Cerrar sesión')}}</button>
+            </form>
         </nav>
     </div>
 </header>

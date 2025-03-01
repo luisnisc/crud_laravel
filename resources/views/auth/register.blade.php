@@ -50,9 +50,8 @@
     </x-slot>
 
     <x-slot name="linkSlot">
-        <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" 
-           href="{{ route('login') }}">
-            {{ __('Already registered?') }}
+        <a href="{{ route('login') }}" class="underline text-sm text-black dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
+            <button class="p-3 rounded-xl bg-blue-900 text-white">Login</button>
         </a>
     </x-slot>
 </x-layouts.loginRegister-layout>

@@ -38,12 +38,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" 
-                       href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
+                
 
                 <x-primary-button class="ms-3">
                     {{ __('Log in') }}
@@ -54,7 +49,7 @@
 
     <x-slot name="linkSlot">
         <a href="{{ route('register') }}" class="underline text-sm text-black dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
-            ¿No tienes cuenta? Regístrate aquí.
+            <button class="p-3 rounded-xl bg-blue-900 text-white">Registrate</button>
         </a>
     </x-slot>
 </x-layouts.loginRegister-layout>
