@@ -99,6 +99,25 @@
     "Conectado como:": "Logged in as:",
     "¿Estás seguro?": "Are you sure?",
     "La acción no se puede deshacer": "This action cannot be undone",
-    "Sí, eliminar": "Yes, delete"
-
+    "Sí, eliminar": "Yes, delete",
+    "Horas previstas": "Planned Hours",
+    "Fecha de comienzo": "Start Date",
+    "Usuario creado correctamente.": "User created successfully.",
+    "Proyecto creado correctamente.": "Project created successfully.",
+    "Actualizar Proyecto": "Update Project",
+    "Editar Proyecto": "Edit Project",
+    "Bienvenido a CrudNisc": "Welcome to CrudNisc",
+    "Un crud para la administración de proyectos y usuarios": "A crud to manage projects and users",
+    "Empezar": "Get started",
+    "¡Vaya! Algo salió mal.": "Whoops! Something went wrong.",
+    "Registrate": "Sign Up",
+    "Inicia Sesión": "Sign In",
+    "Crear Proyecto": "Create Project",
+    "Guardar Proyecto": "Save Project",
+    "Crear Usuario": "Create User",
+    "Guardar Usuario": "Save User",
+    "Editar Usuario": "Edit User",
+    "Eliminar Usuario": "Delete User",
+    "Actualizar Usuario": "Update User",
+    "Listado de Usuarios": "Users List"
 }
