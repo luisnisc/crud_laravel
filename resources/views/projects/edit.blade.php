@@ -35,6 +35,19 @@
                 @enderror
             </div>
 
+            <div class="mb-4">
+                <label for="usuario_id" class="block text
+                -gray-700">{{__('Usuario')}}</label>
+                <select name="usuario_id" id="usuario_id" class="border border-gray-300 w-full p-2" >
+                    <option value="">{{__('Seleccione un usuario')}}</option>
+                    @foreach($usuarios as $usuario)
+                        <option value="{{ $usuario->id }}" {{ old('usuario_id', $project->usuario_id) == $usuario->id ? 'selected' : '' }}>
+                            {{ $usuario->nombre }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
             <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
                 {{__('Actualizar Proyecto')}}
             </button>

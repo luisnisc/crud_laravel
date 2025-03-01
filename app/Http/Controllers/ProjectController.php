@@ -35,7 +35,6 @@ class ProjectController extends Controller
             'titulo'       => 'required|max:255',
             'horas_previstas'       => 'required|integer',
             'fecha_de_comienzo'  => 'required|date',
-            // Agrega si recibes usuario_id desde el formulario:
             'usuario_id' => 'required|exists:usuarios,id',
         ]);
 
@@ -57,7 +56,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('projects.edit', compact('project'));
+        $usuarios = Usuario::all();
+        return view('projects.edit', compact('project', 'usuarios'));
     }
 
     /**
@@ -69,6 +69,7 @@ class ProjectController extends Controller
             'titulo'       => 'required|max:255',
             'horas_previstas'       => 'required|integer',
             'fecha_de_comienzo'  => 'required|date',
+            'usuario_id' => 'required|exists:usuarios,id',
         ]);
 
         $project->update($validated);
