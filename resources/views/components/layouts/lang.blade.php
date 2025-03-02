@@ -1,5 +1,5 @@
 <div x-data="{ open: false }" class="relative inline-block text-left">
-    <button @click="open = !open" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none" id="lang-menu-button" aria-haspopup="true" aria-expanded="true">
+    <button @click="open = !open" type="button" class="inline-flex justify-center w-full rounded-md shadow-sm px-4 py-2 bg-blue-800 text-sm font-medium text-white hover:bg-blue-900 focus:outline-none" id="lang-menu-button" aria-haspopup="true" aria-expanded="true">
         <img src="{{ asset('images/flags/' . app()->getLocale() . '.png') }}" alt="{{ strtoupper(app()->getLocale()) }}" class="w-5 h-5 mr-2">
         @if(app()->getLocale() === 'en')
             English

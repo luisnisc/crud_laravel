@@ -120,5 +120,11 @@
     "Eliminar Usuario": "Delete User",
     "Actualizar Usuario": "Update User",
     "Listado de Usuarios": "Users List",
-    "Seleccione un usuario": "Select a user"
+    "Seleccione un usuario": "Select a user",
+    "Proyecto actualizado correctamente.": "Product updated successfully.",
+    "Proyecto eliminado correctamente.": "Product deleted successfully.",
+    "Usuario actualizado correctamente.": "User updated successfully.",
+    "Usuario eliminado correctamente.": "User deleted successfully.",
+    "El proyecto de actualizara con los datos introducidos.": "The project will be updated with the entered data.",
+    "Sí, actualizar": "Yes, update"
 }

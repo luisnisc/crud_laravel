@@ -44,6 +44,24 @@
         </div>
     </div>
 
+    @if(session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: `{{ __(session('success')) }}`,
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true
+            });
+        });
+    </script>
+@endif
+
+
+
     <script>
 document.addEventListener('DOMContentLoaded', function () {
     const deleteForms = document.querySelectorAll('.delete-form');

@@ -1,7 +1,7 @@
 <x-layouts.app-layout>
     <div class="container mx-auto p-4">
         <h1 class="text-3xl font-bold mb-4">{{ __('Editar Usuario') }}</h1>
-        <form action="{{ route('usuarios.update', $usuario) }}" method="POST">
+        <form action="{{ route('usuarios.update', $usuario) }}" method="POST" class="update-form">
             @csrf
             @method('PUT')
 
@@ -33,4 +33,29 @@
             </a>
         </form>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const updateForms = document.querySelectorAll('.update-form');
+
+            updateForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    Swal.fire({
+                        title: "{{ __('¿Estás seguro?') }}",
+                        text: "{{ __('El proyecto de actualizara con los datos introducidos.') }}",
+                        icon: 'info',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: "{{ __('Sí, actualizar') }}",
+                        cancelButtonText: "{{ __('Cancelar') }}"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </x-layouts.app-layout>

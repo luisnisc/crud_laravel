@@ -100,5 +100,10 @@
     "Eliminar Usuario": "Supprimer l'utilisateur",
     "Actualizar Usuario": "Mettre à jour l'utilisateur",
     "Listado de Usuarios": "Liste des Utilisateurs",
-    "Seleccione un usuario": "Sélectionnez un utilisateur"
+    "Seleccione un usuario": "Sélectionnez un utilisateur",
+    "Usuario creado correctamente.": "Utilisateur créé avec succès.",
+    "Usuario actualizado correctamente.": "Utilisateur mis à jour avec succès.",
+    "Usuario eliminado correctamente.": "Utilisateur supprimé avec succès.",
+    "El proyecto de actualizara con los datos introducidos.": "Le projet sera mis à jour avec les données saisies.",
+    "Sí, actualizar": "Oui, mettre à jour"
 }
