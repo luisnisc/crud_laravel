@@ -10,7 +10,7 @@
             <div>
                 <x-input-label for="email" :value="__('Email')" class="text-dark_blue" />
                 <x-text-input id="email" class="block mt-1 w-full text-dark_blue bg-white border-gray-300" 
-                              type="email" name="email" :value="old('email')" 
+                              type="text" name="email" :value="old('email')" 
                               autofocus autocomplete="username" />
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>

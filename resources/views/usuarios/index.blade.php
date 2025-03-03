@@ -7,9 +7,9 @@
             </a>
         </div>
 
-        <div class="overflow-x-auto shadow-md rounded-lg">
+        <div class="overflow-x-auto shadow-md rounded-lg  h-96 overflow-scroll">
             <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-dark_blue">
+                <thead class="bg-dark_blue sticky top-0 z-10">
                     <tr>
                         <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">ID</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">{{__('Nombre')}}</th>
