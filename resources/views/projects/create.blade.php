@@ -4,7 +4,6 @@
         <form action="{{ route('projects.store') }}" method="POST">
             @csrf
             
-            <!-- Título -->
             <div class="mb-4">
                 <label for="titulo" class="block text-gray-700">{{ __('Título') }}</label>
                 <input type="text" id="titulo" name="titulo" value="{{ old('titulo') }}"
@@ -14,7 +13,6 @@
                 @enderror
             </div>
             
-            <!-- Horas previstas -->
             <div class="mb-4">
                 <label for="horas_previstas" class="block text-gray-700">{{ __('Horas previstas') }}</label>
                 <input type="number" id="horas_previstas" name="horas_previstas" value="{{ old('horas_previstas') }}"
@@ -24,7 +22,6 @@
                 @enderror
             </div>
             
-            <!-- Fecha de comienzo -->
             <div class="mb-4">
                 <label for="fecha_de_comienzo" class="block text-gray-700">{{ __('Fecha de comienzo') }}</label>
                 <input type="date" id="fecha_de_comienzo" name="fecha_de_comienzo" value="{{ old('fecha_de_comienzo') }}"
@@ -34,7 +31,6 @@
                 @enderror
             </div>
 
-            <!-- Usuario -->
             <div class="mb-4">
                 <label for="usuario_id" class="block text-gray-700">{{ __('Usuario') }}</label>
                 <select name="usuario_id" id="usuario_id" class="border border-gray-300 w-full p-2" >

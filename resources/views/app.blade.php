@@ -6,9 +6,7 @@
                 <x-heroicon-s-plus class="w-5 h-5"/>
             </a>
         </div>
-
-        <!-- Contenedor con scroll para el tbody -->
-        <div class="shadow-md rounded-lg overflow-auto" style="max-height: 24rem;">
+        <div class="shadow-md rounded-lg overflow-auto h-[550px]">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-dark_blue sticky top-0 z-10">
                     <tr>

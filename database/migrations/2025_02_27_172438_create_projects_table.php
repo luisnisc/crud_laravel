@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('titulo');
             $table->integer('horas_previstas');
             $table->date('fecha_de_comienzo');
-            // Foreign key referenciando a la tabla usuarios:
             $table->foreignId('usuario_id')->constrained('usuarios')->cascadeOnDelete();
             $table->timestamps();
         });
