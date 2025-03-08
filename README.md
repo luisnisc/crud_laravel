@@ -9,7 +9,6 @@ Durante la instalación se definieron las siguientes configuraciones:
 
 - Se instaló **Breeze** para una autenticación rápida.
 - Se optó por usar **vistas Blade** en el frontend.
-- Se activó el **modo oscuro**.
 - Se configuró **PHPUnit** para la ejecución de pruebas.
 - Se seleccionó **MySQL** como gestor de base de datos.
 
@@ -35,7 +34,7 @@ php artisan make:model Proyecto -m
 
 Este comando generó:
 
-- El modelo **Proyecto** en `app/Models` (o en `app/`).
+- El modelo **Proyecto** en `app/Models`.
 - Un archivo de migración en `database/migrations` para la tabla de proyectos.
 
 Luego se ejecutaron las migraciones:
@@ -65,7 +64,7 @@ Se crearon controladores para gestionar la funcionalidad del sistema:
 Se configuraron archivos de traducción (idiomas español, inglés y francés) en `resources/lang`, integrando la función `__()` en todas las vistas para una adaptación dinámica al idioma seleccionado.  
 Además, se implementó un componente con **AlpineJS** para el cambio de idioma, mostrando un desplegable con las banderas y nombres de los idiomas disponibles.
 
-Por último, se realizaron ajustes en los componentes (como **text-input**, **botones**, **formularios**) y se dio soporte a una **API REST** de forma opcional, utilizando rutas en `routes/api.php` y un controlador **API** para exponer los recursos en formato JSON.
+Por último, se realizaron ajustes en los componentes (como **text-input**, **botones**, **formularios**).
 
 ---
 
@@ -77,8 +76,6 @@ El proceso de creación de **Crud_luis** incluyó:
 2. El desarrollo y adaptación de la interfaz en **Figma**, estableciendo una identidad visual coherente.
 3. La configuración de la base de datos, la creación del modelo **Proyecto** y la ejecución de migraciones.
 4. La creación de controladores para **proyectos** y **usuarios**, implementando la funcionalidad **CRUD** y validaciones pertinentes.
-5. La integración de la **internacionalización** para soportar múltiples idiomas y, opcionalmente, una **API REST**.
-
-Este documento presenta los pasos seguidos para obtener una aplicación escalable, con un diseño robusto y funcionalidades tanto de gestión web como de servicio API.
+5. La integración de la **internacionalización** para soportar múltiples idiomas.
 
 ---

@@ -15,7 +15,7 @@
             
             <div class="mb-4">
                 <label for="email" class="block text-gray-700">{{ __('E-mail') }}</label>
-                <input type="email" id="emailo" name="email" value="{{ old('email') }}"
+                <input type="text" id="email" name="email" value="{{ old('email') }}"
                        class="border border-gray-300 w-full p-2" >
                 @error('email')
                     <span class="text-red-600 text-sm">{{ $message }}</span>
